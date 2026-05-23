@@ -48,6 +48,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     localStorage.setItem("mika-theme", theme);
   }, [theme, effectiveTheme]);
 
+  // Listen for system theme changes when in auto mode
   useEffect(() => {
     if (theme !== "auto") return;
     const mq = window.matchMedia("(prefers-color-scheme: dark)");
