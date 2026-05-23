@@ -1,0 +1,312 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── NUROVIA DESIGN SYSTEM VARIABLES ── */
+:root {
+  /* Dark Theme (Default) */
+  --nv-bg-body: #0a0a0a;
+  --nv-bg-rgb: 10, 10, 10;
+  --nv-bg-primary: #0a0a0a;
+  --nv-bg-secondary: #111111;
+  --nv-bg-tertiary: #141414;
+  --nv-bg-card: rgba(255, 255, 255, 0.03);
+  --nv-bg-card-hover: rgba(255, 255, 255, 0.06);
+  --nv-bg-input: rgba(255, 255, 255, 0.04);
+  --nv-bg-glass: rgba(255, 255, 255, 0.04);
+
+  --nv-border: rgba(255, 255, 255, 0.06);
+  --nv-border-hover: rgba(255, 255, 255, 0.12);
+  --nv-border-gold: rgba(212, 175, 55, 0.3);
+
+  --nv-text-primary: #ffffff;
+  --nv-text-secondary: #e0e0e0;
+  --nv-text-tertiary: #9ca3af;
+  --nv-text-muted: #6b7280;
+  --nv-text-dim: #555555;
+
+  --nv-gold: #d4af37;
+  --nv-gold-light: #f0d878;
+
+  --nv-scrollbar-track: #0a0a0a;
+  --nv-scrollbar-thumb: #2a2a2a;
+
+  /* shadcn compat */
+  --background: 0 0% 4%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 7%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 7%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 43 72% 52%;
+  --primary-foreground: 0 0% 4%;
+  --secondary: 0 0% 10%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 10%;
+  --muted-foreground: 220 5% 65%;
+  --accent: 43 72% 52%;
+  --accent-foreground: 0 0% 4%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 16%;
+  --input: 0 0% 16%;
+  --ring: 43 72% 52%;
+  --radius: 0.625rem;
+}
+
+/* ── Light Theme ── */
+html.light {
+  --nv-bg-body: #f0eee8;
+  --nv-bg-rgb: 240, 238, 232;
+  --nv-bg-primary: #f5f3ee;
+  --nv-bg-secondary: #faf9f6;
+  --nv-bg-tertiary: #eae7e0;
+  --nv-bg-card: rgba(0, 0, 0, 0.03);
+  --nv-bg-card-hover: rgba(0, 0, 0, 0.06);
+  --nv-bg-input: rgba(0, 0, 0, 0.04);
+  --nv-bg-glass: rgba(255, 255, 255, 0.75);
+
+  --nv-border: rgba(0, 0, 0, 0.07);
+  --nv-border-hover: rgba(0, 0, 0, 0.14);
+  --nv-border-gold: rgba(180, 145, 30, 0.4);
+
+  --nv-text-primary: #1c1917;
+  --nv-text-secondary: #44403c;
+  --nv-text-tertiary: #78716c;
+  --nv-text-muted: #a8a29e;
+  --nv-text-dim: #c4bfbb;
+
+  --nv-scrollbar-track: #f0eee8;
+  --nv-scrollbar-thumb: #d6d3cd;
+
+  --background: 40 14% 94%;
+  --foreground: 20 14% 10%;
+  --card: 40 20% 98%;
+  --card-foreground: 20 14% 10%;
+  --popover: 40 20% 98%;
+  --popover-foreground: 20 14% 10%;
+  --secondary: 40 12% 92%;
+  --secondary-foreground: 20 14% 10%;
+  --muted: 40 12% 92%;
+  --muted-foreground: 20 6% 42%;
+  --border: 40 10% 82%;
+  --input: 40 10% 82%;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--nv-bg-body);
+    color: var(--nv-text-primary);
+    font-family: "Geist Sans", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* RTL */
+  [dir="rtl"] {
+    input, textarea, select { direction: rtl; }
+    input[type="email"], input[type="url"] { direction: ltr; text-align: right; }
+    .scrollbar-hide { direction: rtl; }
+  }
+  [dir="rtl"] .rtl-flip { transform: scaleX(-1); }
+  [dir="ltr"] .rtl-flip { transform: none; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--nv-scrollbar-track); }
+  ::-webkit-scrollbar-thumb { background: var(--nv-scrollbar-thumb); border-radius: 9999px; }
+
+  /* Selection */
+  ::selection {
+    background: rgba(212, 175, 55, 0.3);
+    color: #fff;
+  }
+}
+
+/* ── Admin Theme System ──
+   All admin pages use these utility classes instead of hardcoded colors.
+   Both dark and light modes are handled automatically via CSS variables.
+*/
+@layer utilities {
+  .admin-panel {
+    background: var(--nv-bg-card);
+    border: 1px solid var(--nv-border);
+  }
+  .admin-panel-hover:hover {
+    background: var(--nv-bg-card-hover);
+    border-color: var(--nv-border-hover);
+  }
+  .admin-modal {
+    background: var(--nv-bg-secondary);
+    border: 1px solid var(--nv-border);
+  }
+  .admin-input {
+    background: var(--nv-bg-input);
+    border: 1px solid var(--nv-border);
+    color: var(--nv-text-primary);
+  }
+  .admin-input:focus {
+    border-color: var(--nv-border-gold);
+    outline: none;
+  }
+  .admin-text-primary { color: var(--nv-text-primary); }
+  .admin-text-secondary { color: var(--nv-text-secondary); }
+  .admin-text-tertiary { color: var(--nv-text-tertiary); }
+  .admin-text-muted { color: var(--nv-text-muted); }
+  .admin-text-dim { color: var(--nv-text-dim); }
+  .admin-border { border-color: var(--nv-border); }
+  .admin-bg { background-color: var(--nv-bg-card); }
+  .admin-gold { color: var(--nv-gold); }
+  .admin-gold-bg { background: linear-gradient(135deg, var(--nv-gold), var(--nv-gold-light)); }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* ── Light Mode Hardcoded Overrides ──
+   Catches ALL Tailwind arbitrary-value utilities and inline styles
+   that bypass CSS variables. This is comprehensive — covers every
+   admin page, frontend page, and component.
+*/
+html.light {
+  /* ── Core background overrides ── */
+  .bg-\[\#0a0a0a\],
+  .bg-\[\#080808\],
+  .min-h-screen.bg-\[\#0a0a0a\],
+  .min-h-screen.bg-\[\#080808\] { background-color: var(--nv-bg-primary) !important; }
+
+  .bg-\[\#111111\],
+  .bg-\[\#1a1a1a\] { background-color: var(--nv-bg-secondary) !important; }
+
+  .bg-\[\#141414\],
+  .bg-\[\#0f0f0f\],
+  .bg-\[\#0c0c0c\] { background-color: var(--nv-bg-tertiary) !important; }
+
+  /* ── Text color overrides ── */
+  .text-white { color: var(--nv-text-primary) !important; }
+  .text-\[\#E0E0E0\] { color: var(--nv-text-secondary) !important; }
+  .text-\[\#9CA3AF\] { color: var(--nv-text-tertiary) !important; }
+  .text-\[\#666\],
+  .text-\[\#555\],
+  .text-\[\#444\],
+  .text-\[\#333\] { color: var(--nv-text-dim) !important; }
+  .text-\[\#ccc\] { color: var(--nv-text-secondary) !important; }
+  .text-\[\#aaa\],
+  .text-\[\#888\] { color: var(--nv-text-muted) !important; }
+
+  /* ── Frontend section hardcoded backgrounds ── */
+  section.bg-\[\#0a0a0a\] { background-color: var(--nv-bg-primary) !important; }
+  section.bg-\[\#111111\] { background-color: var(--nv-bg-secondary) !important; }
+
+  /* ── Inline rgba backgrounds → inverted for light ── */
+  [style*="rgba(255,255,255,0.01"],
+  [style*="rgba(255, 255, 255, 0.01"] { background-color: rgba(0,0,0,0.01) !important; }
+  [style*="rgba(255,255,255,0.02"],
+  [style*="rgba(255, 255, 255, 0.02"] { background-color: rgba(0,0,0,0.02) !important; }
+  [style*="rgba(255,255,255,0.03"],
+  [style*="rgba(255, 255, 255, 0.03"] { background-color: rgba(0,0,0,0.03) !important; }
+  [style*="rgba(255,255,255,0.04"],
+  [style*="rgba(255, 255, 255, 0.04"] { background-color: rgba(0,0,0,0.04) !important; }
+  [style*="rgba(255,255,255,0.05"],
+  [style*="rgba(255, 255, 255, 0.05"] { background-color: rgba(0,0,0,0.05) !important; }
+  [style*="rgba(255,255,255,0.06"],
+  [style*="rgba(255, 255, 255, 0.06"] { background-color: rgba(0,0,0,0.06) !important; }
+  [style*="rgba(255,255,255,0.07"],
+  [style*="rgba(255, 255, 255, 0.07"] { background-color: rgba(0,0,0,0.07) !important; }
+  [style*="rgba(255,255,255,0.08"],
+  [style*="rgba(255, 255, 255, 0.08"] { background-color: rgba(0,0,0,0.08) !important; }
+  [style*="rgba(255,255,255,0.10"],
+  [style*="rgba(255, 255, 255, 0.10"] { background-color: rgba(0,0,0,0.10) !important; }
+  [style*="rgba(255,255,255,0.12"],
+  [style*="rgba(255, 255, 255, 0.12"] { background-color: rgba(0,0,0,0.12) !important; }
+  [style*="rgba(255,255,255,0.15"],
+  [style*="rgba(255, 255, 255, 0.15"] { background-color: rgba(0,0,0,0.15) !important; }
+
+  /* ── Inline rgba borders → inverted for light ── */
+  [style*="border:1px solid rgba(255"],
+  [style*="border: 1px solid rgba(255"] { border-color: rgba(0,0,0,0.07) !important; }
+  [style*="border-bottom:1px solid rgba(255"],
+  [style*="border-bottom: 1px solid rgba(255"] { border-bottom-color: rgba(0,0,0,0.07) !important; }
+  [style*="border-right:1px solid rgba(255"],
+  [style*="border-right: 1px solid rgba(255"] { border-right-color: rgba(0,0,0,0.07) !important; }
+  [style*="border-left:1px solid rgba(255"],
+  [style*="border-left: 1px solid rgba(255"] { border-left-color: rgba(0,0,0,0.07) !important; }
+
+  /* ── Glass / backdrop-filter backgrounds ── */
+  [style*="backdrop-filter:blur"][style*="rgba(255"],
+  [style*="backdropFilter"][style*="rgba(255"] { background: rgba(255,255,255,0.75) !important; }
+  [style*="backdropFilter"][style*="rgba(20,20,20"] { background: rgba(255,255,255,0.75) !important; }
+
+  /* ── Admin sidebar hardcoded gradients ── */
+  [style*="linear-gradient(180deg, #0c0c0c"] {
+    background: linear-gradient(180deg, #eae7e0, #f5f3ee) !important;
+  }
+  [style*="linear-gradient(180deg, #141414"] {
+    background: linear-gradient(180deg, #faf9f6, #f5f3ee) !important;
+  }
+  /* Admin header */
+  [style*="rgba(8,8,8,0.85"] { background: rgba(255,255,255,0.85) !important; }
+  [style*="rgba(20, 20, 20, 0.6"] { background: rgba(255,255,255,0.6) !important; }
+  [style*="rgba(20,20,20,0.95"] { background: rgba(255,255,255,0.95) !important; }
+
+  /* ── Hover state overrides ── */
+  .hover\:bg-\[rgba\(255\,255\,255\,0\.03\)\]:hover { background-color: rgba(0,0,0,0.04) !important; }
+  .hover\:bg-\[rgba\(255\,255\,255\,0\.06\)\]:hover { background-color: rgba(0,0,0,0.08) !important; }
+  .hover\:text-white:hover { color: var(--nv-text-primary) !important; }
+
+  /* ── Input text colors ── */
+  input:not([type="email"]):not([type="url"]), textarea, select {
+    color: var(--nv-text-primary) !important;
+  }
+  input::placeholder, textarea::placeholder { color: var(--nv-text-dim) !important; }
+
+  /* ── Chart tooltips ── */
+  [style*="rgba(15,15,15,0.95"] { background: "rgba(255,255,255,0.95)" !important; }
+
+  /* ── Recharts text ── */
+  .recharts-cartesian-axis-tick-value { fill: var(--nv-text-muted) !important; }
+  .recharts-text { fill: var(--nv-text-muted) !important; }
+
+  /* ── Selection ── */
+  ::selection { background: rgba(212, 175, 55, 0.25); color: #1c1917; }
+}
+
+/* ── Animations ── */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+@keyframes kenBurns {
+  0% { transform: scale(1.1) translate(0, 0); }
+  50% { transform: scale(1.05) translate(-1%, -0.5%); }
+  100% { transform: scale(1.08) translate(1%, 0.5%); }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
