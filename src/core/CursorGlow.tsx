@@ -1,5 +1,5 @@
 /**
- * NUROVIA CURSOR GLOW
+ * MIKA CURSOR GLOW
  * A subtle gold glow that follows the cursor, creating a lantern-like reveal effect.
  * Purely decorative, uses CSS custom properties for GPU-accelerated positioning.
  */

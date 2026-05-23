@@ -1,5 +1,5 @@
 /**
- * NUROVIA THEME STORE
+ * MIKA THEME STORE
  * Manages dark/light mode, gold accent intensity, and glass effects.
  */
 import { create } from "zustand";
@@ -32,6 +32,6 @@ export const useThemeStore = create<ThemeState>()(
       setReducedMotion: (v) => set({ reducedMotion: v }),
       setCursorGlow: (v) => set({ cursorGlow: v }),
     }),
-    { name: "nurovia-theme" }
+    { name: "mika-theme" }
   )
 );

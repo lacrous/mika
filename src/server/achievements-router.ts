@@ -13,7 +13,7 @@ export const BADGE_DEFS = [
   { key: "collector", name: "Collector", icon: "📚", color: "#8b5cf6", desc: "Created your first collection" },
   { key: "socialite", name: "Socialite", icon: "💬", color: "#ec4899", desc: "Posted 10 comments" },
   { key: "marathon", name: "Marathon", icon: "🏃", color: "#14b8a6", desc: "Watched 24 episodes in one day" },
-  { key: "early_bird", name: "Early Bird", icon: "🐦", color: "#f97316", desc: "Joined NUROVIA in the first month" },
+  { key: "early_bird", name: "Early Bird", icon: "🐦", color: "#f97316", desc: "Joined MIKA in the first month" },
   { key: "completionist", name: "Completionist", icon: "⭐", color: "#D4AF37", desc: "Completed 10 anime series" },
 ];
 

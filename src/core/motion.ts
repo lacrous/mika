@@ -1,7 +1,7 @@
 /**
- * NUROVIA MOTION SYSTEM
+ * MIKA MOTION SYSTEM
  * Reusable animation presets for consistent, cinematic motion across the platform.
- * Every animation follows the Nurovia easing philosophy: smooth, premium, GPU-accelerated.
+ * Every animation follows the Mika easing philosophy: smooth, premium, GPU-accelerated.
  */
 
 import type { Variants, Transition } from "framer-motion";

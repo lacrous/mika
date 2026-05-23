@@ -71,7 +71,7 @@ export function NavigationMenu({ isOpen, onClose }: NavigationMenuProps) {
 
             {/* Header */}
             <div className={`flex items-center justify-between px-5 h-14 border-b`} style={{ borderColor: "rgba(255,255,255,0.05)" }}>
-              <h2 className="text-[14px] font-bold tracking-wide" style={{ color: "var(--nv-text-primary)" }}>NUROVIA</h2>
+              <h2 className="text-[14px] font-bold tracking-wide" style={{ color: "var(--nv-text-primary)" }}>MIKA</h2>
               <button onClick={onClose} className="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-white/5 transition-all">
                 <X className="w-4 h-4" style={{ color: "var(--nv-text-dim)" }} />
               </button>

@@ -54,7 +54,7 @@ export const newsRouter = createRouter({
         content: input.content,
         coverImage: input.coverImage || null,
         category: input.category || "news",
-        authorName: input.authorName || "NUROVIA Team",
+        authorName: input.authorName || "MIKA Team",
       });
       return { success: true, id: Number(result[0].insertId) };
     }),

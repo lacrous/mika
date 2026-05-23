@@ -78,7 +78,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
             <AnimatePresence>
               {!collapsed && (
                 <motion.div initial={{ opacity: 0, width: 0 }} animate={{ opacity: 1, width: "auto" }} exit={{ opacity: 0, width: 0 }} transition={{ duration: 0.2 }}>
-                  <p className="text-[15px] font-bold text-white tracking-wide whitespace-nowrap">NUROVIA</p>
+                  <p className="text-[15px] font-bold text-white tracking-wide whitespace-nowrap">MIKA</p>
                   <p className="text-[9px] text-[#D4AF37] tracking-[0.2em] uppercase whitespace-nowrap font-medium">Control Panel</p>
                 </motion.div>
               )}
@@ -125,7 +125,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
             {!collapsed && (
               <div className="min-w-0 flex-1">
                 <p className="text-[12px] font-medium truncate" style={{ color: "var(--nv-text-primary)" }}>{user?.name || "Admin"}</p>
-                <p className="text-[10px] text-[#555] truncate">{user?.email || "admin@nurovia.com"}</p>
+                <p className="text-[10px] text-[#555] truncate">{user?.email || "admin@mika.com"}</p>
               </div>
             )}
           </div>
@@ -143,7 +143,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, #D4AF37, #F0D878)", boxShadow: "0 0 20px rgba(212,175,55,0.2)" }}>
                   <Shield className="w-5 h-5 text-[#0a0a0a]" />
                 </div>
-                <div><p className="text-[15px] font-bold tracking-wide" style={{ color: "var(--nv-text-primary)" }}>NUROVIA</p><p className="text-[9px] text-[#D4AF37] tracking-[0.2em] uppercase">Control Panel</p></div>
+                <div><p className="text-[15px] font-bold tracking-wide" style={{ color: "var(--nv-text-primary)" }}>MIKA</p><p className="text-[9px] text-[#D4AF37] tracking-[0.2em] uppercase">Control Panel</p></div>
               </div>
               <button onClick={() => setMobileOpen(false)} className="w-8 h-8 rounded-lg flex items-center justify-center text-[#666] hover:text-white"><X className="w-5 h-5" /></button>
             </div>
@@ -209,7 +209,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
               <motion.h1 className="text-[24px] font-bold text-white" key={pageTitle} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
                 {pageTitle}
               </motion.h1>
-              <p className="text-[12px] mt-1" style={{ color: "var(--nv-text-dim)" }}>{isRTL ? "إدارة ومراقبة منصة NUROVIA" : "Manage and monitor your NUROVIA platform"}</p>
+              <p className="text-[12px] mt-1" style={{ color: "var(--nv-text-dim)" }}>{isRTL ? "إدارة ومراقبة منصة MIKA" : "Manage and monitor your MIKA platform"}</p>
             </div>
             <Link to="/" className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-[11px] text-[#888] hover:text-white bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.05)] hover:border-[rgba(212,175,55,0.2)] transition-all">
               <Home className="w-3 h-3" />{isRTL ? "الموقع" : "View Site"}

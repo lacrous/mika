@@ -1,5 +1,5 @@
 /**
- * NUROVIA CINEMATIC HERO
+ * MIKA CINEMATIC HERO
  * The centerpiece experience: layered motion, parallax depth, cinematic reveals.
  * Inspired by Linear, Apple, and Framer's approach to hero design.
  */
@@ -19,7 +19,7 @@ const ParticlesBackground = lazy(() =>
  }))
 );
 
-export function NuroviaHero() {
+export function MikaHero() {
  const navigate = useNavigate();
  const { t, isRTL } = useLanguage();
  const [current, setCurrent] = useState(0);

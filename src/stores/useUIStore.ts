@@ -1,5 +1,5 @@
 /**
- * NUROVIA UI STORE
+ * MIKA UI STORE
  * Manages global UI state: sidebar, modals, toasts, loading states.
  */
 import { create } from "zustand";

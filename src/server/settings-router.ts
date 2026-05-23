@@ -12,7 +12,7 @@ const DEFAULT_SETTINGS = {
   newUserAlerts: false,
   autoApproveReviews: true,
   maintenanceMode: false,
-  siteName: "NUROVIA",
+  siteName: "MIKA",
   siteDescription: "Premium Anime Streaming Platform",
   maxUploadSize: 50,
   allowRegistration: true,

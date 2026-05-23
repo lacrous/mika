@@ -132,7 +132,7 @@ export function AdminDashboard() {
           {/* Overlay text on 3D */}
           <div className="relative -mt-[200px] h-[200px] flex flex-col justify-center px-8 pointer-events-none z-10">
             <motion.h2 className="text-[24px] font-bold admin-text-primary" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
-              {isRTL ? "لوحة تحكم NUROVIA" : "NUROVIA Control Panel"}
+              {isRTL ? "لوحة تحكم MIKA" : "MIKA Control Panel"}
             </motion.h2>
             <motion.p className="text-[13px] admin-text-tertiary mt-1" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
               {isRTL ? "مراقبة وإدارة منصتك" : "Monitor and manage your platform"}

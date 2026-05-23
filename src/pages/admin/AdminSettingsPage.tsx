@@ -61,7 +61,7 @@ export function AdminSettingsPage() {
     newUserAlerts: false,
     autoApproveReviews: true,
     maintenanceMode: false,
-    siteName: "NUROVIA",
+    siteName: "MIKA",
     siteDescription: "Premium Anime Streaming Platform",
     maxUploadSize: 50,
     allowRegistration: true,
@@ -250,7 +250,7 @@ export function AdminSettingsPage() {
             </div>
             <div className="pt-2 border-t border-[rgba(255,255,255,0.03)]">
               <div className="flex items-center justify-between text-[11px]">
-                <span className="text-[#555]">NUROVIA Platform</span>
+                <span className="text-[#555]">MIKA Platform</span>
                 <span className="text-[#888] font-mono">v2.1.0</span>
               </div>
             </div>

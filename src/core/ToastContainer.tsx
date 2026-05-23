@@ -1,5 +1,5 @@
 /**
- * NUROVIA TOAST CONTAINER
+ * MIKA TOAST CONTAINER
  * Premium notification system with smooth animations.
  */
 import { AnimatePresence, motion } from "framer-motion";

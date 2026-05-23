@@ -1,5 +1,5 @@
 /**
- * NUROVIA DESIGN TOKENS
+ * MIKA DESIGN TOKENS
  * Token-based design system for scalable, consistent theming.
  * All visual values are centralized here for maintainability.
  */

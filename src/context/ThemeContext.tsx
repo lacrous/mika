@@ -30,7 +30,7 @@ function resolveTheme(theme: Theme): "dark" | "light" {
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setThemeState] = useState<Theme>(() => {
     if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("nurovia-theme") as Theme | null;
+      const saved = localStorage.getItem("mika-theme") as Theme | null;
       if (saved === "light" || saved === "dark" || saved === "auto") return saved;
       return "auto";
     }
@@ -45,7 +45,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     root.classList.remove("dark", "light");
     root.classList.add(effectiveTheme);
     root.setAttribute("data-theme", effectiveTheme);
-    localStorage.setItem("nurovia-theme", theme);
+    localStorage.setItem("mika-theme", theme);
   }, [theme, effectiveTheme]);
 
   // Listen for system theme changes when in auto mode

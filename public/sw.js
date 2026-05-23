@@ -1,4 +1,4 @@
-const CACHE_NAME = "nurovia-v1";
+const CACHE_NAME = "mika-v1";
 const STATIC_ASSETS = [
   "/",
   "/index.html",
@@ -70,7 +70,7 @@ async function networkFirst(request) {
   } catch {
     const cached = await caches.match(request);
     if (cached) return cached;
-    return new Response("Offline - NUROVIA", {
+    return new Response("Offline - MIKA", {
       status: 503,
       headers: { "Content-Type": "text/plain" },
     });

@@ -5,7 +5,7 @@ import { ArrowUp, Shield } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { HelmetProvider } from "react-helmet-async";
 import { Navbar } from "@/components/Navbar";
-import { NuroviaHero } from "@/sections/NuroviaHero";
+import { MikaHero } from "@/sections/MikaHero";
 import { SeasonAnime } from "@/sections/SeasonAnime";
 import { TrendingCarousel } from "@/sections/TrendingCarousel";
 import { TopPicksGrid } from "@/sections/TopPicksGrid";
@@ -94,13 +94,13 @@ function HomePage() {
  return (
  <>
       <Helmet>
-        <title>NUROVIA - Premium Anime Streaming</title>
+        <title>MIKA - Premium Anime Streaming</title>
         <meta name="description" content="Watch anime in premium quality. Thousands of titles, HD streaming, no ads." />
-        <meta property="og:title" content="NUROVIA - Premium Anime Streaming" />
+        <meta property="og:title" content="MIKA - Premium Anime Streaming" />
         <meta property="og:description" content="Watch anime in premium quality." />
         <meta property="og:type" content="website" />
       </Helmet>
- <NuroviaHero />
+ <MikaHero />
  <SeasonAnime onAnimeClick={handleAnimeClick} isLoading={isLoading} />
  <TrendingCarousel onAnimeClick={handleAnimeClick} isLoading={isLoading} />
  <TopPicksGrid onAnimeClick={handleAnimeClick} isLoading={isLoading} />
@@ -235,7 +235,7 @@ function App() {
  )}
  </AnimatePresence>
 
- {/* Nurovia Global Systems */}
+ {/* Mika Global Systems */}
  <CursorGlow />
  <ToastContainer />
  </div>
