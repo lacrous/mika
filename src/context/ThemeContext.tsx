@@ -11,7 +11,7 @@ interface ThemeContextType {
 }
 
 const ThemeContext = createContext<ThemeContextType>({
-  theme: "auto",
+  theme: "dark",
   effectiveTheme: "dark",
   toggleTheme: () => {},
   setTheme: () => {},
@@ -32,9 +32,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     if (typeof window !== "undefined") {
       const saved = localStorage.getItem("mika-theme") as Theme | null;
       if (saved === "light" || saved === "dark" || saved === "auto") return saved;
-      return "auto";
+      return "dark";
     }
-    return "auto";
+    return "dark";
   });
 
   const effectiveTheme = resolveTheme(theme);
@@ -48,7 +48,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     localStorage.setItem("mika-theme", theme);
   }, [theme, effectiveTheme]);
 
-  // Listen for system theme changes when in auto mode
   useEffect(() => {
     if (theme !== "auto") return;
     const mq = window.matchMedia("(prefers-color-scheme: dark)");
